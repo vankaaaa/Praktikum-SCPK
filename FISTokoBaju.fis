@@ -4,7 +4,7 @@ Type='mamdani'
 Version=2.0
 NumInputs=3
 NumOutputs=3
-NumRules=0
+NumRules=6
 AndMethod='min'
 OrMethod='max'
 ImpMethod='min'
@@ -59,3 +59,9 @@ MF1='meningkat':'trimf',[-12.5 0 15]
 MF2='menurun':'trimf',[15 30 42.5]
 
 [Rules]
+1 3 0, 3 0 0 (1) : 1
+3 3 3, 0 3 0 (1) : 1
+3 1 1, 0 0 2 (1) : 1
+1 0 3, 0 0 1 (1) : 1
+0 1 1, 0 1 0 (1) : 1
+0 2 3, 2 0 0 (1) : 2
