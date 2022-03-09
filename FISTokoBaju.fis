@@ -1,0 +1,61 @@
+[System]
+Name='FISTokoBaju'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=3
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='harga'
+Range=[0 10]
+NumMFs=3
+MF1='murah':'gaussmf',[1.769 -1.388e-16]
+MF2='mahal':'gaussmf',[1.769 5]
+MF3='sangat_mahal':'gaussmf',[1.769 10]
+
+[Input2]
+Name='diskon'
+Range=[0 10]
+NumMFs=3
+MF1='kecil':'gaussmf',[1.769 -1.388e-16]
+MF2='sedang':'gaussmf',[1.769 5]
+MF3='besar':'gaussmf',[1.769 10]
+
+[Input3]
+Name='desain'
+Range=[0 10]
+NumMFs=3
+MF1='mengecewakan':'gaussmf',[1.769 -1.388e-16]
+MF2='bagus':'gaussmf',[1.77 5]
+MF3='memuaskan':'gaussmf',[1.771 10]
+
+[Output1]
+Name='pembelian'
+Range=[0 30]
+NumMFs=3
+MF1='sedikit':'trimf',[0 5 10]
+MF2='sedang':'trimf',[10 15 20]
+MF3='banyak':'trimf',[20 25 30]
+
+[Output2]
+Name='worth_the_money'
+Range=[0 30]
+NumMFs=3
+MF1='tidak':'trimf',[0 5 10]
+MF2='biasa':'trimf',[10 15 20]
+MF3='iya':'trimf',[20 25 30]
+
+[Output3]
+Name='daya_tarik'
+Range=[0 30]
+NumMFs=2
+MF1='meningkat':'trimf',[-12.5 0 15]
+MF2='menurun':'trimf',[15 30 42.5]
+
+[Rules]
